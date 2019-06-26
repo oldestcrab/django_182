@@ -30,3 +30,8 @@ class HeroInfo(models.Model):
     isDelete = models.BooleanField(default=False)
     hcontent = models.CharField(max_length=100)
     hbook = models.ForeignKey('BookInfo')
+
+
+class AreaInfo(models.Model):
+    title = models.CharField(max_length=20)
+    parea = models.ForeignKey('self', null=True, blank=True)
